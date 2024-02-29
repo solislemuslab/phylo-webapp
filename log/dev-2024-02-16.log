@@ -1,0 +1,23 @@
+┌ Info: 2024-02-16 12:09:53 For silent loading, specify `verbosity=0`. 
+└ @ Main C:\Users\82537\.julia\packages\MLJModels\iFOi9\src\loading.jl:159
+┌ Info: 2024-02-16 12:09:55 Watching ["E:\\lab\\project\\PhyloClustering-web"]
+└ @ GenieAutoReload C:\Users\82537\.julia\packages\GenieAutoReload\ESvsh\src\GenieAutoReload.jl:19
+┌ Info: 2024-02-16 12:10:07 
+│ Web Server starting at http://127.0.0.1:8000 
+└ @ Genie.Server C:\Users\82537\.julia\packages\Genie\5qchC\src\Server.jl:166
+┌ Info: 2024-02-16 12:10:07 Listening on: 127.0.0.1:8000, thread id: 1
+└ @ HTTP.Servers C:\Users\82537\.julia\packages\HTTP\bDoga\src\Servers.jl:367
+┌ Info: 2024-02-16 12:10:45 Training machine(PCA(maxoutdim = 2, …), …).
+└ @ MLJBase C:\Users\82537\.julia\packages\MLJBase\mIaqI\src\machines.jl:493
+┌ Info: 2024-02-16 12:21:26 Training machine(PCA(maxoutdim = 2, …), …).
+└ @ MLJBase C:\Users\82537\.julia\packages\MLJBase\mIaqI\src\machines.jl:493
+┌ Info: 2024-02-16 12:21:31 Training machine(PCA(maxoutdim = 2, …), …).
+└ @ MLJBase C:\Users\82537\.julia\packages\MLJBase\mIaqI\src\machines.jl:493
+┌ Info: 2024-02-16 12:25:38 Training machine(PCA(maxoutdim = 2, …), …).
+└ @ MLJBase C:\Users\82537\.julia\packages\MLJBase\mIaqI\src\machines.jl:493
+┌ Info: 2024-02-16 12:25:45 Training machine(PCA(maxoutdim = 2, …), …).
+└ @ MLJBase C:\Users\82537\.julia\packages\MLJBase\mIaqI\src\machines.jl:493
+┌ Info: 2024-02-16 12:27:57 Autoreloading
+└ @ GenieAutoReload C:\Users\82537\.julia\packages\GenieAutoReload\ESvsh\src\GenieAutoReload.jl:22
+┌ Info: 2024-02-16 12:27:59 Training machine(PCA(maxoutdim = 2, …), …).
+└ @ MLJBase C:\Users\82537\.julia\packages\MLJBase\mIaqI\src\machines.jl:493

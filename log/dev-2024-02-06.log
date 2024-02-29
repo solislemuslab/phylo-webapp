@@ -1,0 +1,49 @@
+┌ Info: 2024-02-06 13:19:34 Watching ["E:\\lab\\project\\PhyloClustering-web"]
+└ @ GenieAutoReload C:\Users\82537\.julia\packages\GenieAutoReload\ESvsh\src\GenieAutoReload.jl:19
+┌ Info: 2024-02-06 13:19:35 
+│ Web Server starting at http://127.0.0.1:8000 
+└ @ Genie.Server C:\Users\82537\.julia\packages\Genie\5qchC\src\Server.jl:166
+┌ Info: 2024-02-06 13:19:35 Listening on: 127.0.0.1:8000, thread id: 1
+└ @ HTTP.Servers C:\Users\82537\.julia\packages\HTTP\bDoga\src\Servers.jl:367
+┌ Info: 2024-02-06 13:20:58 
+│ Web Server starting at http://127.0.0.1:8000 
+└ @ Genie.Server C:\Users\82537\.julia\packages\Genie\5qchC\src\Server.jl:166
+┌ Info: 2024-02-06 13:21:49 Server on 127.0.0.1:8000 closing
+└ @ HTTP.Servers C:\Users\82537\.julia\packages\HTTP\bDoga\src\Servers.jl:394
+┌ Info: 2024-02-06 13:22:27 Autoreloading
+└ @ GenieAutoReload C:\Users\82537\.julia\packages\GenieAutoReload\ESvsh\src\GenieAutoReload.jl:22
+┌ Info: 2024-02-06 13:29:09 Autoreloading
+└ @ GenieAutoReload C:\Users\82537\.julia\packages\GenieAutoReload\ESvsh\src\GenieAutoReload.jl:22
+┌ Error: 2024-02-06 13:49:07 Failed to revise E:\lab\project\PhyloClustering-web\app.jl
+│   exception = Revise.ReviseEvalException("E:\\lab\\project\\PhyloClustering-web\\app.jl:2", UndefVarError(:StatisticAnalysis), Any[(top-level scope at app.jl:2, 1)])
+└ @ Revise C:\Users\82537\.julia\packages\Revise\FaTes\src\packagedef.jl:722
+┌ Warning: 2024-02-06 13:49:07 The running code does not match the saved version for the following files:
+│ 
+│   E:\lab\project\PhyloClustering-web\app.jl
+│ 
+│ If the error was due to evaluation order, it can sometimes be resolved by calling `Revise.retry()`.
+│ Use Revise.errors() to report errors again. Only the first error in each file is shown.
+│ Your prompt color may be yellow until the errors are resolved.
+└ @ Revise C:\Users\82537\.julia\packages\Revise\FaTes\src\packagedef.jl:832
+┌ Info: 2024-02-06 13:49:08 
+│ Web Server starting at http://127.0.0.1:8000 
+└ @ Genie.Server C:\Users\82537\.julia\packages\Genie\5qchC\src\Server.jl:166
+┌ Info: 2024-02-06 13:49:08 Listening on: 127.0.0.1:8000, thread id: 1
+└ @ HTTP.Servers C:\Users\82537\.julia\packages\HTTP\bDoga\src\Servers.jl:367
+┌ Warning: 2024-02-06 13:50:17 E:\lab\project\PhyloClustering-web\lib\PhyloClustering.jl no longer exists, deleted all methods
+└ @ Revise C:\Users\82537\.julia\packages\Revise\FaTes\src\packagedef.jl:666
+┌ Warning: 2024-02-06 13:50:17 E:\lab\project\PhyloClustering-web\lib\bipartition.jl no longer exists, deleted all methods
+└ @ Revise C:\Users\82537\.julia\packages\Revise\FaTes\src\packagedef.jl:666
+┌ Warning: 2024-02-06 13:50:17 E:\lab\project\PhyloClustering-web\lib\helper.jl no longer exists, deleted all methods
+└ @ Revise C:\Users\82537\.julia\packages\Revise\FaTes\src\packagedef.jl:666
+┌ Warning: 2024-02-06 13:50:17 E:\lab\project\PhyloClustering-web\lib\models.jl no longer exists, deleted all methods
+└ @ Revise C:\Users\82537\.julia\packages\Revise\FaTes\src\packagedef.jl:666
+┌ Info: 2024-02-06 13:50:17 Server on 127.0.0.1:8000 closing
+└ @ HTTP.Servers C:\Users\82537\.julia\packages\HTTP\bDoga\src\Servers.jl:394
+┌ Info: 2024-02-06 13:50:25 
+│ Web Server starting at http://127.0.0.1:8000 
+└ @ Genie.Server C:\Users\82537\.julia\packages\Genie\5qchC\src\Server.jl:166
+┌ Info: 2024-02-06 13:50:25 Listening on: 127.0.0.1:8000, thread id: 1
+└ @ HTTP.Servers C:\Users\82537\.julia\packages\HTTP\bDoga\src\Servers.jl:367
+┌ Info: 2024-02-06 13:51:10 Server on 127.0.0.1:8000 closing
+└ @ HTTP.Servers C:\Users\82537\.julia\packages\HTTP\bDoga\src\Servers.jl:394
