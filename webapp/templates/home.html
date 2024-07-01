@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Phylogenetic App{% endblock %}
+
+{% block content %}
+    <h1>Introduction</h1>
+    <p>
+        This is a web application in Phylogenetic analysis. This webapp includes
+        two functions, which are Clustering, and the Goodness-of-fit Test. To ues
+        these functions, please first upload your data or file containing the 
+        phylogenetic information that you are interested to learn.
+    </p>
+
+    <section>Upload file</section>
+
+    <button onclick = "redirect_clustering()">Clustering</button>
+    <script>
+        function redirect_clustering() {
+            window.location.href = "{{ url_for('clustering') }}";
+        }
+    </script>
+
+    <button onclick = "redirect_goodness()">Goodness-of-fit</button>
+    <script>
+        function redirect_goodness() {
+            window.location.href = "{{ url_for('goodness') }}";
+        }
+    </script>
+{% endblock %}
+

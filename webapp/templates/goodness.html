@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Phylogenetic App</title>
+    {% endif %}
+</head>
+
+<body>
+    <h1>Goodness Page</h1>
+
+    <section>
+        <h2>Setting arguments</h2>
+        <form action="/process" method="POST">
+            <!-- Optimize the branch length -->
+            <label for="parameter">Optimize the branch length:</label>
+            <select id="parameter" name="parameter">
+                <option value="value1">Yes</option>
+                <option value="value2">No</option>
+            </select>
+            <br><br>
+
+            <!-- Choose test statistics -->
+            <label for="parameter">Choose your test statistics:</label>
+            <select id="parameter" name="parameter">
+                <option value="value1">Likelihood radio test statistics</option>
+                <option value="value2">Qlog test statistics</option>
+                <option value="value3">Pearson's Chi-square test statistics</option>
+            </select>
+            <br><br>
+
+            <!-- Correct dependence across 4-taxon -->
+            <label for="parameter">Need correction on depence across 4-taxon:</label>
+            <select id="parameter" name="parameter">
+                <option value="value1">Yes</option>
+                <option value="value2">No</option>
+            </select>
+            <br><br>
+
+            <!-- See the simulation process -->
+            <label for="parameter">See the simulation process:</label>
+            <select id="parameter" name="parameter">
+                <option value="value1">Yes</option>
+                <option value="value2">No</option>
+            </select>
+            <br><br>
+
+            <!-- Seed -->
+            <form action = "#" method = "post"> 
+                <p>Set seed:
+                <input type = "text" name = "seed"/></p>
+            </form>
+
+            <!-- Number of simulated data sets -->
+            <form action = "#" method = "post"> 
+                <p>Number of simulated data sets:
+                <input type = "text" name = "nsim"/></p>
+            </form>
+
+            <!-- Save simulation files -->
+            <label for="parameter">Save simulation files:</label>
+            <select id="parameter" name="parameter">
+                <option value="value1">Yes</option>
+                <option value="value2">No</option>
+            </select>
+            
+            <!-- entire submit button -->
+            <br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+        </form>
+    </section>
+
+    <section>
+        <h2>Upload files</h2>
+    </section>
+
+    <section>
+        <h2>Showing figures</h2>
+    </section>
+
+    <section>
+        <h2>Summary</h2>
+    </section>
+
+    <section>
+        <h2>Download the result</h2>
+    </section>
+
+
+</body>
+</html>
