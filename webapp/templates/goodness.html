@@ -6,17 +6,93 @@
     {% else %}
         <title>Phylogenetic App</title>
     {% endif %}
+
+    <style>
+        .head1 {
+            font-size: 40px;
+            color: #009900;
+            font-weight: bold;
+        }
+
+        .head2 {
+            font-size: 17px;
+            margin-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        body {
+            margin: 0 auto;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .menu {
+            position: sticky;
+            top: 0;
+            background-color: #009900;
+            padding: 10px 0px 10px 0px;
+            color: white;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .menu a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .menu-log {
+            right: auto;
+            float: right;
+        }
+
+        footer {
+            width: 100%;
+            bottom: 0px;
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .body_sec {
+            margin-left: 20px;
+        }
+
+        .side{
+            float: right;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h1>Goodness Page</h1>
+    <header>
+        <div class = "head1">
+            Goodness Page
+        </div>
+    </header>
 
-    <section>
+    <nav class="menu">
+        <a href="#home">HOME</a>
+        <a href="#clusteringg">CLUSTERING</a>
+    </nav>
+
+    <aside>
+        <div class = "side">
         <h2>Setting arguments</h2>
         <form action="/process" method="POST">
             <!-- Optimize the branch length -->
             <label for="parameter">Optimize the branch length:</label>
-            <select id="parameter" name="parameter">
+            <select id="parameter" name="optbl">
                 <option value="value1">Yes</option>
                 <option value="value2">No</option>
             </select>
@@ -24,8 +100,8 @@
 
             <!-- Choose test statistics -->
             <label for="parameter">Choose your test statistics:</label>
-            <select id="parameter" name="parameter">
-                <option value="value1">Likelihood radio test statistics</option>
+            <select id="parameter" name="test_stat">
+                <option value="value1">Likelihood ratio test statistics</option>
                 <option value="value2">Qlog test statistics</option>
                 <option value="value3">Pearson's Chi-square test statistics</option>
             </select>
@@ -33,7 +109,7 @@
 
             <!-- Correct dependence across 4-taxon -->
             <label for="parameter">Need correction on depence across 4-taxon:</label>
-            <select id="parameter" name="parameter">
+            <select id="parameter" name="corr">
                 <option value="value1">Yes</option>
                 <option value="value2">No</option>
             </select>
@@ -41,7 +117,7 @@
 
             <!-- See the simulation process -->
             <label for="parameter">See the simulation process:</label>
-            <select id="parameter" name="parameter">
+            <select id="parameter" name="diag">
                 <option value="value1">Yes</option>
                 <option value="value2">No</option>
             </select>
@@ -61,7 +137,7 @@
 
             <!-- Save simulation files -->
             <label for="parameter">Save simulation files:</label>
-            <select id="parameter" name="parameter">
+            <select id="parameter" name="save">
                 <option value="value1">Yes</option>
                 <option value="value2">No</option>
             </select>
@@ -71,18 +147,35 @@
             <input type="submit" value="Submit">
             <br><br>
         </form>
-    </section>
+        </div>
+    </aside>
 
     <section>
         <h2>Upload files</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p>{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
     </section>
 
     <section>
         <h2>Showing figures</h2>
+        <p>{{ name }}</p>
+        <img src={{ name }} alt="Chart" height="42" width="42">
     </section>
 
     <section>
         <h2>Summary</h2>
+        <p>The overall p-value is: {{ overall_p }}</p>
+        <p>The empirical p-value is: {{ prop_greater }}</p>
     </section>
 
     <section>

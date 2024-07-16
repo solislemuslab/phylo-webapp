@@ -10,20 +10,43 @@
         phylogenetic information that you are interested to learn.
     </p>
 
-    <section>Upload file</section>
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p>{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
 
+        <button onclick = "redirect_upload()">Upload File</button>
+        <script>
+        function redirect_upload() {
+            window.location.href = "{{ url_for('upload') }}";
+        }
+        </script>
+        <br><br>
+
+    </section>
+
+    <section>
     <button onclick = "redirect_clustering()">Clustering</button>
     <script>
         function redirect_clustering() {
             window.location.href = "{{ url_for('clustering') }}";
         }
     </script>
+    <br><br>
+    </section>
 
+    <section>
     <button onclick = "redirect_goodness()">Goodness-of-fit</button>
     <script>
         function redirect_goodness() {
             window.location.href = "{{ url_for('goodness') }}";
         }
     </script>
+    <br><br>
+    </section>
 {% endblock %}
 
