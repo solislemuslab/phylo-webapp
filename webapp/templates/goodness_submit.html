@@ -89,10 +89,10 @@
     <aside>
         <div class = "side">
         <h2>Setting arguments</h2>
-        <form method="POST">
+        <form action="/process" method="POST">
             <!-- Optimize the branch length -->
             <label for="parameter">Optimize the branch length:</label>
-            <select id="optbl" name="optbl">
+            <select id="parameter" name="optbl">
                 <option value="value1">Yes</option>
                 <option value="value2">No</option>
             </select>
@@ -100,7 +100,7 @@
 
             <!-- Choose test statistics -->
             <label for="parameter">Choose your test statistics:</label>
-            <select id="test_stat" name="test_stat">
+            <select id="parameter" name="test_stat">
                 <option value="value1">Likelihood ratio test statistics</option>
                 <option value="value2">Qlog test statistics</option>
                 <option value="value3">Pearson's Chi-square test statistics</option>
@@ -109,7 +109,7 @@
 
             <!-- Correct dependence across 4-taxon -->
             <label for="parameter">Need correction on depence across 4-taxon:</label>
-            <select id="corr" name="corr">
+            <select id="parameter" name="corr">
                 <option value="value1">Yes</option>
                 <option value="value2">No</option>
             </select>
@@ -117,25 +117,27 @@
 
             <!-- See the simulation process -->
             <label for="parameter">See the simulation process:</label>
-            <select id="diag" name="diag">
+            <select id="parameter" name="diag">
                 <option value="value1">Yes</option>
                 <option value="value2">No</option>
             </select>
             <br><br>
 
-            <!-- Seed -->        
-            <p>Set seed:
-            <input type = "text" id = "seed" name = "seed"/></p>
-            
+            <!-- Seed -->
+            <form action = "#" method = "post"> 
+                <p>Set seed:
+                <input type = "text" name = "seed"/></p>
+            </form>
 
-            <!-- Number of simulated data sets -->            
-            <p>Number of simulated data sets:
-            <input type = "text" id = "seed" name = "nsim"/></p>
-            
+            <!-- Number of simulated data sets -->
+            <form action = "#" method = "post"> 
+                <p>Number of simulated data sets:
+                <input type = "text" name = "nsim"/></p>
+            </form>
 
             <!-- Save simulation files -->
             <label for="parameter">Save simulation files:</label>
-            <select id="save" name="save">
+            <select id="parameter" name="save">
                 <option value="value1">Yes</option>
                 <option value="value2">No</option>
             </select>
@@ -166,12 +168,10 @@
 
     <section>
         <h2>Showing figures</h2>
-        {% if plot_url %}
-            <p>{{ name }}</p>
-            <img src={{ plot_url }}" alt="Distribution">
-        {% elif plot_url is not none %}
-            <p>Invalid data format. Please enter comma-separated values.</p>
-        {% endif %}
+        <p>{{ name }}</p>
+
+        <img src={{ url }} alt="Chart" height="42" width="42">
+
     </section>
 
     <section>
